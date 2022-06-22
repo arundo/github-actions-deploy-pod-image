@@ -13,4 +13,4 @@ runs:
       run: echo $phrase
       shell: bash
       env:
-        phrase = {{ inputs.phrase }}
+        phrase: ${{ inputs.phrase }}
