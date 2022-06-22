@@ -16,4 +16,4 @@ jobs:
     - name: Say Something
       uses: ./.github/actions/greet
       with:
-        phrase: env.input
+        phrase: $env.input
