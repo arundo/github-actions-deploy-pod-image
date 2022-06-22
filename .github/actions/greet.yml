@@ -1,0 +1,16 @@
+name: Greet
+description: Says something
+
+inputs:
+  phrase:
+    description: What to say
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Greeting
+      run: echo $phrase
+      shell: bash
+      env:
+        phrase = {{ inputs.phrase }}

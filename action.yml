@@ -7,20 +7,20 @@ inputs:
     description: Kubernetes cluster resource name at Azure
     required: true
   deployment:
-    description: deployment in Kubernetes, expected to be the name of the service
+    description: Deployment in Kubernetes, expected to be the name of the service
     required: true
   overlays:
     description: Kustomize overlays directory name
     required: true
   overlays-path:
-    description: path to Kustomize overlays directory
+    description: Path to Kustomize overlays directory
     required: false
     default: ops/kubernetes/overlays
   product:
-    description: Arundo product e.g. marathon, identity
+    description: Arundo product name
     required: true
   registry:
-    description: docker registry name at Azure
+    description: Docker image registry name at Azure
     required: true
   resource-group:
     description: Resource group for cluster

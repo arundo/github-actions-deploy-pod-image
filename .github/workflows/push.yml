@@ -1,0 +1,15 @@
+name: Build and deploy to Titan develop
+on:
+  push
+
+env:
+  input: Hello World
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Say Something
+      uses: ./.github/actions/greet
+      with:
+        phrase: ${{ env.input }}
