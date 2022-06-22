@@ -47,7 +47,7 @@ runs:
     - name: Deploy to kubernetes cluster
       run: |
         cd $path/$overlays/
-        kustomize edit set image deployment/$deployment $registry/$product/$deployment:$sha_tag
+        kustomize edit set image $registry/$product/$deployment=$registry/$product/$deployment:$sha_tag
         kubectl apply -k .
       env:
         deployment: ${{ inputs.deployment }}
